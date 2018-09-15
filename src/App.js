@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar , NavbarBrand} from "mdbreact";
+import Menu from "./components/Menu.component";
+import { DISHES } from './shared/dishes';
 
 class App extends Component {
   render() {
@@ -12,6 +14,9 @@ class App extends Component {
               <strong>Confusion React App </strong>
           </NavbarBrand>
         </Navbar>
+        <div className="container">
+          <Menu dishes={DISHES} />
+        </div>
       </div>
     );
   }
