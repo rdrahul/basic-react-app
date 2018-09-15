@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar , NavbarBrand} from "mdbreact";
-import Menu from "./components/Menu.component";
+import Menu from "./components/menu/Menu.component";
 import { DISHES } from './shared/dishes';
 
 class App extends Component {

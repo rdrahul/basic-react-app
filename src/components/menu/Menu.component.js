@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import './menu.component.css';
 import {Card , CardBody , CardImage ,  CardTitle, CardText } from 'mdbreact';
+import DishDetail from "../dishdetail/dishdetail.component";
 
 class Menu extends Component {
     constructor(props) {
@@ -16,15 +17,7 @@ class Menu extends Component {
     renderDish(dish){
         if ( dish !=null ) {
             return (
-                <div className="col-md-6" >
-                    <Card  >
-                        <CardImage className="img-card" src ={dish.image} alt={dish.name} ></CardImage>
-                        <CardBody>
-                            <CardTitle>{dish.name}</CardTitle>   
-                            <CardText>{dish.description}</CardText>
-                        </CardBody>
-                    </Card>
-              </div>
+                <DishDetail dish = {dish} ></DishDetail>
             )
         }else{
             return '';
