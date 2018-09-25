@@ -3,6 +3,8 @@ import { Navbar , NavbarBrand} from "mdbreact";
 import Menu  from "../menu/Menu.component";
 import DishDetail from '../dishdetail/dishdetail.component';
 import { DISHES } from "../../shared/dishes";
+import Header from "../header/header.component";
+import Footer from "../footer/footer.component";
 
 class Main extends Component {
 
@@ -24,15 +26,14 @@ class Main extends Component {
     render(){
         return (
             <div>
-                <Navbar color="indigo" dark expand="md" scrolling>
-                <NavbarBrand href="/">
-                    <strong>Confusion React App </strong>
-                </NavbarBrand>
-                </Navbar>
-                <div className="container">
+                
+                <div>
+                    <Header />
                     <Menu dishes={this.state.dishes} onClick = { (dishId) => this.onDishSelect(dishId) }  />
                     <DishDetail dish = { this.state.dishes.filter( dish => dish.id === this.state.selectedDish )[0] } ></DishDetail>
+                    <Footer />
                 </div>
+                
             </div>
         );
     }

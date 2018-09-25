@@ -49,7 +49,7 @@ import { ListGroup, ListGroupItem, Badge } from 'mdbreact'
     function RenderDish( {dish} ){
         return (
             <div className="col-md-6" >
-                <Card >
+                 <Card >
                     <CardImage className="img-card" src ={dish.image} alt={dish.name} ></CardImage>
                     <CardBody>
                         <CardTitle>{dish.name}</CardTitle>   
